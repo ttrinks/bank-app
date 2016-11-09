@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  address: MyString
+Bankone:
+  name: Online Bank
+  address: Webstreet 3
 
-two:
-  name: MyString
-  address: MyString
+Banktwo:
+  name: Normal Bank
+  address: Wallstreet 123
+
+Bankthree:
+  name: BlackOnlineBank
+  address: Black Str 12

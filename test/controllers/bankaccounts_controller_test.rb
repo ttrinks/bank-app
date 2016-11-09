@@ -2,7 +2,7 @@ require 'test_helper'
 
 class BankaccountsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @bankaccount = bankaccounts(:one)
+    @bankaccount = bankaccounts(:Bankaccountone)
   end
 
   test "should get index" do
