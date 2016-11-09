@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-clientone:
-  name: Max Muster
-  address: Muster Str 8
+one:
+  name: MyString
+  address: MyString
   brith: 2016-11-09
 
-clienttwo:
-  name: Sams Tag
-  address: Sam Str 7
-  brith: 2011-11-11
+two:
+  name: MyString
+  address: MyString
+  brith: 2016-11-09

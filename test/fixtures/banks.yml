@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-bankone:
-  name: OnlineBank
-  address: Street 12
+one:
+  name: MyString
+  address: MyString
 
-banktwo:
-  name: NormalBank
-  address: Street 21
+two:
+  name: MyString
+  address: MyString
