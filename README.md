@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-[![Build Status]( <git https://github.com/ttrinks/bank-app>.svg?branch=master)] ( <git https://github.com/ttrinks/bank-app>)
+[![Build Status](https://travis-ci.org/ttrinks/bank-app.svg?branch=master)](https://travis-ci.org/ttrinks/bank-app)
 
 * Ruby version
 
