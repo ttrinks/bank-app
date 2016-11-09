@@ -7,4 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Client.create(name: "Max Muster", address: "Muster Str 18", brith: "2016-11-09")
-Bankaccount.create(account_type: 1, balance: 100.00, client_id: 1)
+Bankaccount.create(account_type: 1, balance: 100.00, client_id: 1, banks_id: 1)
+Bankaccount.create(account_type: 1, balance: 120.00, client_id: 1, banks_id: 2)
+
+Client.create(name: "Sam Gamschie", address: "Elbenweg 7", brith: "1970-01-10")
+Bankaccount.create(account_type: 1, balance: 140.00, client_id: 2, banks_id: 1)
