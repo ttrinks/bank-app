@@ -1,8 +1,16 @@
 language: ruby
 rvm:
-  - 2.3.0
+- 2.3.0
+services:
+- postgresql
 env:
-  - DB=sqlite
+- DB=postgres
+- DB=sqlite
+before_script:
+- psql -c 'create database travis_ci_test;' -U postgres
 script:
-  - bin/rails db:migrate RAILS_ENV=test
-  - bundle exec rails test
+- bin/rails db:migrate RAILS_ENV=test
+- bundle exec rails test
+deploy:
+  api_key:
+    secure: jL2kU+zbz4akJjo7wCbv9CyhdNjEih7LCTwTrdCC0B0sKIMxETs2hTtrrCTNPQ8sDdMkvkEtTDueoTXPVOKuctOVX44/G4poLJYUbS7XtAwW2oD08TzT2yofdDSVb8s+0ECoaFRAGesis8Slt+6XGW72zuX7o/nUeOMkfoXx9TCPMnFGcoeLy0xINZk1PsDu+ROOlQ4nk8h9Z3MxLntHc4QtbNNSEpdoPi+w1hWD6hog3yJU+VJwmfqoXZXBfGkTaPBQc32EB/fS+VTYbjBxOs03u0dCE2rqWo7R+z/yDFk5Fu/7+C7Dp37Hd3sokaWhe1sLLU3gnr5NIf6hACgYHtIdGrFL6YpJLkNvRyfgpVPkToH9hl5XLIMhf3LCp5nFXmQMCnxqceliKPncuLnhdQVtomviL4WzFpgSsvoTZPCh6wtE7U+1VvUb0WVqOvf6LWXJYkOFF+si9ooACJUY/Z9hJFpNZp4Hg7h9W7H841ou1wgDWymEqMxA1WEMDYsPgw/eiSClVXye0tHpYCQGoanw1O1NaKEaLsN/4Nvwx09NHdaj6jOH7ydPNHBFRI6aOn/lGmzNGpe8eNCHupK/NQM7ZoWziUc29A6v2k8kakVv26YuSoKnVmwyORL9T68KuYcaYFe8vJxYh0+raQEHSRXIqdvOGN1jwt0C+Tkf2ic=
