@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 Bankaccountone:
-  client_id: 1
+  client: Clientone
   banks_id: 1
   account_type: 1
   balance: 19.99
 
 Bankaccounttwo:
-  client_id: 1
+  client: Clientone
   banks_id: 2
   account_type: 1
   balance: 921.99

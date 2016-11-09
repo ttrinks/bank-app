@@ -6,9 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Client.create(name: "Max Muster", address: "Muster Str 18", brith: "2016-11-09")
-Bankaccount.create(account_type: 1, balance: 100.00, client_id: 1, banks_id: 1)
-Bankaccount.create(account_type: 1, balance: 120.00, client_id: 1, banks_id: 2)
+bankOne = Bank.create(name: "OnlineBank", address: "Web Street 8")
+bankTwo = Bank.create(name: "NormalBank", address: "Wall Street 123")
+bankThree = Bank.create(name: "Black OnlineBank", address: "Dark Street 6")
 
-Client.create(name: "Sam Gamschie", address: "Elbenweg 7", brith: "1970-01-10")
-Bankaccount.create(account_type: 1, balance: 140.00, client_id: 2, banks_id: 1)
+clientOne = Client.create(name: "Max Muster", address: "Muster Str 18", brith: "2016-11-09")
+clientTwo = Client.create(name: "Sam Gamschie", address: "Elbenweg 7", brith: "1970-01-10")
+clientThree = Client.create(name: "Wolverine", address: "X Men Base 7", brith: "1955-02-03")
+
+bankaccountOne = clientOne.bankaccounts.create(account_type: 1, balance: 100.00, banks_id: 1)
+bankaccountTwo = clientOne.bankaccounts.create(account_type: 2, balance: 120.10, banks_id: 2)
+bankaccountThree = clientTwo.bankaccounts.create(account_type: 1, balance: 140.03, banks_id: 1)
+bankaccountFour = clientThree.bankaccounts.create(account_type: 2, balance: 1410.94, banks_id: 3)
