@@ -1,1 +1,1 @@
-json.array! @bankaccounts, partial: 'bankaccounts/bankaccount', as: :bankaccount
+json.array! @clients, partial: 'clients/client', as: :client

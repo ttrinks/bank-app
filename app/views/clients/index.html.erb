@@ -1,28 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Bankaccounts</h1>
+<h1>Clients</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Client</th>
-      <th>Bank</th>
-      <th>Account type</th>
-      <th>Balance</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Brith</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @bankaccounts.each do |bankaccount| %>
+    <% @clients.each do |client| %>
       <tr>
-        <td><%= bankaccount.client_id %></td>
-        <td><%= bankaccount.bank_id %></td>
-        <td><%= bankaccount.account_type %></td>
-        <td><%= bankaccount.balance %></td>
-        <td><%= link_to 'Show', bankaccount %></td>
-        <td><%= link_to 'Edit', edit_bankaccount_path(bankaccount) %></td>
-        <td><%= link_to 'Destroy', bankaccount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= client.name %></td>
+        <td><%= client.address %></td>
+        <td><%= client.brith %></td>
+        <td><%= link_to 'Show', client %></td>
+        <td><%= link_to 'Edit', edit_client_path(client) %></td>
+        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Bankaccount', new_bankaccount_path %>
+<%= link_to 'New Client', new_client_path %>

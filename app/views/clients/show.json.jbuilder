@@ -1,1 +1,1 @@
-json.partial! "bankaccounts/bankaccount", bankaccount: @bankaccount
+json.partial! "clients/client", client: @client

@@ -10,15 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161108170613) do
+ActiveRecord::Schema.define(version: 20161109150400) do
 
   create_table "bankaccounts", force: :cascade do |t|
-    t.integer  "client_id"
-    t.integer  "bank_id"
     t.integer  "account_type"
     t.decimal  "balance"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "client_id"
+    t.integer  "banks_id"
+    t.index ["banks_id"], name: "index_bankaccounts_on_banks_id"
+    t.index ["client_id"], name: "index_bankaccounts_on_client_id"
+  end
+
+  create_table "banks", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.date     "brith"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

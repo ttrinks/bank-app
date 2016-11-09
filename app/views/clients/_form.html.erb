@@ -1,10 +1,10 @@
-<%= form_for(bankaccount) do |f| %>
-  <% if bankaccount.errors.any? %>
+<%= form_for(client) do |f| %>
+  <% if client.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(bankaccount.errors.count, "error") %> prohibited this bankaccount from being saved:</h2>
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
 
       <ul>
-      <% bankaccount.errors.full_messages.each do |message| %>
+      <% client.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,25 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :client_id %>
-    <%= f.number_field :client_id %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :bank_id %>
-    <%= f.number_field :bank_id %>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
   </div>
 
   <div class="field">
-    <%= f.label :account_type %>
-    <select name="city_id" id="city_id">
-      <%= options_for_select([['Private Account', 1], ['Business Account', 2]]) %>
-    </select>
-  </div>
-
-  <div class="field">
-    <%= f.label :balance %>
-    <%= f.text_field :balance %>
+    <%= f.label :brith %>
+    <%= f.date_select :brith %>
   </div>
 
   <div class="actions">

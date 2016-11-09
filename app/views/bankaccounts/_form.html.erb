@@ -12,18 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :client_id %>
-    <%= f.number_field :client_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :bank_id %>
-    <%= f.number_field :bank_id %>
-  </div>
-
-  <div class="field">
     <%= f.label :account_type %>
-    <select name="city_id" id="city_id">
+    <select name="bankaccount_account_type" id="bankaccount_account_type">
       <%= options_for_select([['Private Account', 1], ['Business Account', 2]]) %>
     </select>
   </div>
