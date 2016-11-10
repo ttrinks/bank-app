@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161109150400) do
+ActiveRecord::Schema.define(version: 20161110140053) do
 
   create_table "bankaccounts", force: :cascade do |t|
     t.integer  "account_type"
@@ -36,6 +36,13 @@ ActiveRecord::Schema.define(version: 20161109150400) do
     t.date     "brith"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
