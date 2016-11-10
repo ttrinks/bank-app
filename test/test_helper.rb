@@ -24,3 +24,7 @@ class ActionDispatch::IntegrationTest
     Capybara.use_default_driver
   end
 end
+
+def is_logged_in?
+  !session[:user_id].nil?
+end
