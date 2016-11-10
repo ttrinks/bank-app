@@ -14,3 +14,8 @@ Clientthree:
   name: Ping Pong
   address: Plong 6
   brith: 1980-10-10
+
+Clientfour:
+  name: Taka Tuka
+  address: Tiki Str 2
+  brith: 1982-02-02
