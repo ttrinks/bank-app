@@ -55,5 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :test do
   # see https://github.com/jnicklas/capybara#setup
   gem 'capybara'
-  gem 'launchy'
 end
