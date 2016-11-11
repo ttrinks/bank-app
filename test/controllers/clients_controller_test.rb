@@ -3,6 +3,7 @@ require 'test_helper'
 class ClientsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @client = clients(:Clientfour)
+    login_as(users(:one))
   end
 
   test "should get index" do

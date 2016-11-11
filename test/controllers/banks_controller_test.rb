@@ -3,6 +3,7 @@ require 'test_helper'
 class BanksControllerTest < ActionDispatch::IntegrationTest
   setup do
     @bank = banks(:Bankone)
+    login_as(users(:one))
   end
 
   test "should get index" do
