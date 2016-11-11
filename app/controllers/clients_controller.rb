@@ -1,5 +1,4 @@
 class ClientsController < ApplicationController
-  skip_before_action :authorize, only: [:bankaccounts, :show]
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
   # GET /clients

@@ -8,12 +8,30 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+    <h1>BankApp</h1>
+    <hr>
+  </header>
+
   <body>
+    <div class="nav">
+			<ul>
+				<li class="login-logout">
+					<% if logged_in? %> You are logged in as <%= link_to current_user.name, current_user %>
+    			-- <%= link_to "Logout", logout_path, method: :delete %>
+    			<% else %> <%= link_to "Log in", login_path %><% end %>
+				</li>
+				<li>
+					<%= link_to "news", :controller => 'news', :action => 'index' %>
+				</li>
+				<li>
+					<%= link_to "clients", :controller => 'clients', :action => 'index' %>
+				</li>
+			</ul>
+		</div>
+
     <%= yield %>
-    <hr/>BankApp -
-    <% if logged_in? %> Logged in as <%= link_to current_user.name, current_user %>
-    - <%= link_to "Logout", logout_path, method: :delete %>
-    <% else %> <%= link_to "Log in", login_path %><% end %>
-    <hr/>
+
   </body>
+
 </html>
